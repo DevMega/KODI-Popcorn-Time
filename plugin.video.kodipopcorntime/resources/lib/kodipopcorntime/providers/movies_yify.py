@@ -30,7 +30,7 @@ _genres = {
 _proxy_identifier = 'movies.yify.proxies'
 def _getDomains():
     domains = [
-        "https://yts.ag",
+        "https://yts.popcorntimece.ch",
         "http://eqwww.image.yt"
     ]
 
@@ -61,8 +61,8 @@ def _create_item(data):
     title = data["title"]
     return {
         "label": title,
-        "icon": data.get("medium_cover_image", data.get("small_cover_image")),
-        "thumbnail": data.get("medium_cover_image", data.get("small_cover_image")),
+        "icon": data.get(" movie.medium_cover_image", data.get("movie.small_cover_image")),
+        "thumbnail": data.get(" movie.medium_cover_image", data.get("movie.small_cover_image")),
         "info": {
             "title": title,
             "year": int(data.get("year") or 0),
@@ -182,7 +182,7 @@ def browse(action, page, **kwargs):
     '''
     return {
         'proxies': _getDomains(),
-        'path': "/api/v2/list_movies.json",
+        'path': "/api/v2/list_movies_ptc.json",
         'params': {
             'limit': settings.addon.limit, # Do not return more media end the limit, only lees (require)
             'page': page,
