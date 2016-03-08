@@ -1,6 +1,4 @@
-#I'm looking for someone who can take over the project, otherwise the project will be closed in two months. :(#
-
-I'm sorry, but I do not have time to project.
+#Looking into fixing this project still work in progress
 
 <hr><hr><hr>
 
